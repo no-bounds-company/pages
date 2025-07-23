@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Not Found - No Bounds Company</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="refresh" content="5; url=/index.html" />
+  </head>
+  <body class="index-bg">
+    <main
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+      "
+    >
+      <h1
+        style="
+          font-size: 5rem;
+          font-weight: 700;
+          margin-bottom: 0.5em;
+          letter-spacing: -2px;
+          color: #222;
+        "
+      >
+        404
+      </h1>
+      <p
+        style="
+          font-size: 1.5rem;
+          color: #444;
+          margin-bottom: 2em;
+          text-align: center;
+          max-width: 400px;
+        "
+      >
+        Sorry, the page you’re looking for doesn’t exist or has been moved.
+      </p>
+      <p style="font-size: 1.1rem; color: #333; margin-bottom: 0">
+        Redirecting to homepage in <span id="countdown">5</span> seconds...
+      </p>
+      <script>
+        let seconds = 5;
+        const el = document.getElementById("countdown");
+        const timer = setInterval(() => {
+          seconds--;
+          if (el) el.textContent = seconds;
+          if (seconds <= 0) clearInterval(timer);
+        }, 1000);
+      </script>
+    </main>
+  </body>
+</html>
